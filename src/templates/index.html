@@ -16,16 +16,16 @@
         hx-target="#conversion-result"
         hx-swap="innerHTML"
       >
-        <label for="amount">Plastic: <output id="amount-value">50</output></label><br>
+        <label for="hdpe">HDPE: <output id="hdpe-value">50</output></label><br>
         <input 
-          id="amount" 
-          name="amount" 
+          id="hdpe" 
+          name="hdpe" 
           type="range" 
           min="1" max="100" 
           step="0.1" 
           style="width: 400px" 
           value="50" 
-          oninput="document.getElementById('amount-value').value = this.value"
+          oninput="document.getElementById('hdpe-value').value = this.value"
         ><br>
         <input type="submit" value="Submit">
       </form>
