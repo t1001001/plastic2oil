@@ -9,5 +9,27 @@
     <script src="https://unpkg.com/htmx.org@1.9.12/dist/ext/json-enc.js"></script>
   </head>
   <body>
+    <div>
+      <form
+        hx-post="/conversion"
+        hx-ext="json-enc"
+        hx-target="#conversion-result"
+        hx-swap="innerHTML"
+      >
+        <label for="amount">Plastic: <output id="amount-value">50</output></label><br>
+        <input 
+          id="amount" 
+          name="amount" 
+          type="range" 
+          min="1" max="100" 
+          step="0.1" 
+          style="width: 400px" 
+          value="50" 
+          oninput="document.getElementById('amount-value').value = this.value"
+        ><br>
+        <input type="submit" value="Submit">
+      </form>
+      <div id="conversion-result"></div>
+    </div>
   </body>
 </html>
