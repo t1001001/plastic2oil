@@ -7,7 +7,9 @@ authors = [
     { name = "tobi", email = "tobias1001001@proton.me" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.143.0",
+]
 
 [project.scripts]
 plastic2oil = "plastic2oil:main"
