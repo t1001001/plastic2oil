@@ -1,4 +1,7 @@
 from pydantic import BaseModel
 
 class Plastic(BaseModel):
-    amount: float
+    hdpe: float
+    ldpe: float
+    pp: float
+    ps_eps: float
