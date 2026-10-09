@@ -12,9 +12,9 @@ async def convert_plastic(plastic: Plastic, request: Request):
     if request.headers.get("HX-Request") == "true":
         return HTMLResponse(
             content=(
-                f"<p>Plastic: {oil.amount_of_plastic:g}</p>"
-                f"<p>Pyrolysis oil: {oil.amount_of_pyrolysis_oil:g}</p>"
-                f"<p>Estimated value: {oil.money:g}</p>"
+                f"<p>Plastic: {oil.amount_of_plastic:g}kg</p>"
+                f"<p>Pyrolysis oil: {oil.amount_of_pyrolysis_oil:g}l</p>"
+                f"<p>Estimated value: {oil.money:g} NOK</p>"
             )
         )
     return oil
