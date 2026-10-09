@@ -1,12 +1,6 @@
 from fastapi import FastAPI
-import uvicorn
+from src.routers import conversion_router
 
 app = FastAPI()
 
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-if __name__ == "__main__":
-    uvicorn.run("main:app", port=8080, reload=True)
+app.include_router(conversion_router.router)
