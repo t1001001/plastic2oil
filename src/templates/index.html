@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f5f7f2" />
-  <title>Ghost2Oil</title>
+  <title>BlueCycle</title>
 
   <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.11/dist/htmx.min.js"
     integrity="sha384-2OatzQy1H+Zd/IIrjr1TcuDGqLXeHhbooAyJY1KdQMKnr4LZ22k31GBLdYKHmVjg"
@@ -32,22 +32,22 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: #16845b;
+      background: #008cff;
       border: 3px solid white;
-      box-shadow: 0 0 0 1px #16845b;
+      box-shadow: 0 0 0 1px #165384;
     }
 
     input[type="range"]::-moz-range-thumb {
       width: 13px;
       height: 13px;
       border-radius: 50%;
-      background: #16845b;
+      background: #165384;
       border: 3px solid white;
-      box-shadow: 0 0 0 1px #16845b;
+      box-shadow: 0 0 0 1px #165384;
     }
 
     input[type="range"]:focus-visible {
-      outline: 2px solid #16845b;
+      outline: 2px solid #165384;
       outline-offset: 5px;
     }
 
@@ -66,7 +66,7 @@
 
     .convert-button:hover {
       transform: translateY(-1px);
-      background: #116b49;
+      background: #008cff;
     }
 
     .convert-button:active {
@@ -87,7 +87,7 @@
     <header class="mb-10 flex items-center gap-3">
       <div>
         <h1 class="text-xl font-bold tracking-tight sm:text-2xl">
-          Ghost<span class="text-emerald-700">2</span>Oil - Moving from waste to <span class="text-emerald-700">value</span>
+          Blue<span class="text-sky-500">Cycle</span> - Moving from waste to <span class="text-sky-500">value</span>
         </h1>
       </div>
     </header>
@@ -103,32 +103,32 @@
     >
 
       <!-- Summary -->
-      <section class="overflow-hidden rounded-3xl bg-emerald-800 p-6 text-white shadow-sm sm:p-8">
+      <section class="overflow-hidden rounded-3xl bg-sky-700 p-6 text-white shadow-sm sm:p-8">
         <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <div class="mt-2 flex items-baseline gap-2">
               <output id="total-value" class="text-4xl font-bold tracking-tight sm:text-5xl">
                 200
               </output>
-              <span class="text-lg text-emerald-100">kg</span>
+              <span class="text-lg text-sky-100">kg</span>
             </div>
-            <p class="mt-2 text-sm text-emerald-100">
+            <p class="mt-2 text-sm text-sky-100">
               Total plastic input
             </p>
           </div>
           <div class="flex items-center justify-start">
             <button type="submit"
-                    class="convert-button inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-sm">
+                    class="convert-button inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm">
               Convert
               <span aria-hidden="true"></span>
             </button>
           </div>
         </div>
         <div class="mt-6 h-2 overflow-hidden rounded-full bg-white/15">
-          <div id="total-bar" class="h-full rounded-full bg-emerald-300 transition-all duration-200"
+          <div id="total-bar" class="h-full rounded-full bg-sky-300 transition-all duration-200"
                style="width: 50%"></div>
         </div>
-        <div class="mt-2 flex justify-between text-xs text-emerald-100">
+        <div class="mt-2 flex justify-between text-xs text-sky-100">
           <span>Minimum 4 kg</span>
           <span>Maximum 400 kg</span>
         </div>
@@ -264,7 +264,7 @@
     <section class="mt-8" aria-label="Conversion results">
       <div id="conversion-result"
           aria-live="polite"
-          class="h-24 flex flex-col  items-center justify-center overflow-y-auto rounded-2xl border border-gray-200 bg-emerald-700 p-4 text-sm font-semibold text-white shadow-sm">
+          class="h-24 flex flex-col  items-center justify-center overflow-y-auto rounded-2xl border border-gray-200 bg-sky-700 p-4 text-sm font-semibold text-white shadow-sm">
         <p class="text-center">Nothing converted yet...</p>
       </div>
     </section>
@@ -290,7 +290,7 @@
         const percentage = ((value - min) / (max - min)) * 100;
 
         slider.style.background =
-          `linear-gradient(to right, #16845b ${percentage}%, #e5e7eb ${percentage}%)`;
+          `linear-gradient(to right, #008cff ${percentage}%, #e5e7eb ${percentage}%)`;
       });
 
       document.getElementById("total-value").value =
