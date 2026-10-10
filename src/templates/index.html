@@ -32,22 +32,22 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: #008cff;
+      background: #16845b;
       border: 3px solid white;
-      box-shadow: 0 0 0 1px #165384;
+      box-shadow: 0 0 0 1px #16845b;
     }
 
     input[type="range"]::-moz-range-thumb {
       width: 13px;
       height: 13px;
       border-radius: 50%;
-      background: #165384;
+      background: #16845b;
       border: 3px solid white;
-      box-shadow: 0 0 0 1px #165384;
+      box-shadow: 0 0 0 1px #16845b;
     }
 
     input[type="range"]:focus-visible {
-      outline: 2px solid #165384;
+      outline: 2px solid #16845b;
       outline-offset: 5px;
     }
 
@@ -66,7 +66,7 @@
 
     .convert-button:hover {
       transform: translateY(-1px);
-      background: #008cff;
+      background: #116b49;
     }
 
     .convert-button:active {
@@ -87,7 +87,7 @@
     <header class="mb-10 flex items-center gap-3">
       <div>
         <h1 class="text-xl font-bold tracking-tight sm:text-2xl">
-          Blue<span class="text-sky-500">Cycle</span> - Moving from waste to <span class="text-sky-500">value</span>
+          Blue<span class="text-emerald-700">Cycle</span> - Moving from waste to <span class="text-emerald-700">value</span>
         </h1>
       </div>
     </header>
@@ -103,32 +103,32 @@
     >
 
       <!-- Summary -->
-      <section class="overflow-hidden rounded-3xl bg-sky-700 p-6 text-white shadow-sm sm:p-8">
+      <section class="overflow-hidden rounded-3xl bg-emerald-800 p-6 text-white shadow-sm sm:p-8">
         <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <div class="mt-2 flex items-baseline gap-2">
               <output id="total-value" class="text-4xl font-bold tracking-tight sm:text-5xl">
                 200
               </output>
-              <span class="text-lg text-sky-100">kg</span>
+              <span class="text-lg text-emerald-100">kg</span>
             </div>
-            <p class="mt-2 text-sm text-sky-100">
+            <p class="mt-2 text-sm text-emerald-100">
               Total plastic input
             </p>
           </div>
           <div class="flex items-center justify-start">
             <button type="submit"
-                    class="convert-button inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm">
+                    class="convert-button inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-sm">
               Convert
               <span aria-hidden="true"></span>
             </button>
           </div>
         </div>
         <div class="mt-6 h-2 overflow-hidden rounded-full bg-white/15">
-          <div id="total-bar" class="h-full rounded-full bg-sky-300 transition-all duration-200"
+          <div id="total-bar" class="h-full rounded-full bg-emerald-300 transition-all duration-200"
                style="width: 50%"></div>
         </div>
-        <div class="mt-2 flex justify-between text-xs text-sky-100">
+        <div class="mt-2 flex justify-between text-xs text-emerald-100">
           <span>Minimum 4 kg</span>
           <span>Maximum 400 kg</span>
         </div>
@@ -153,7 +153,7 @@
                 </div>
                 <div>
                   <h4 class="font-semibold">HDPE</h4>
-                  <p class="mt-0.5 text-xs text-gray-500">High-density polyethylene</p>
+                  <p class="mt-0.5 text-xs text-gray-500">High-density polyethylene (0.25l per kg)</p>
                 </div>
               </div>
               <div class="text-right">
@@ -181,7 +181,7 @@
                 </div>
                 <div>
                   <h4 class="font-semibold">LDPE</h4>
-                  <p class="mt-0.5 text-xs text-gray-500">Low-density polyethylene</p>
+                  <p class="mt-0.5 text-xs text-gray-500">Low-density polyethylene (0.2l per kg)</p>
                 </div>
               </div>
               <div class="text-right">
@@ -209,7 +209,7 @@
                 </div>
                 <div>
                   <h4 class="font-semibold">PP</h4>
-                  <p class="mt-0.5 text-xs text-gray-500">Polypropylene</p>
+                  <p class="mt-0.5 text-xs text-gray-500">Polypropylene (0.2l per kg)</p>
                 </div>
               </div>
               <div class="text-right">
@@ -237,7 +237,7 @@
                 </div>
                 <div>
                   <h4 class="font-semibold">PS / EPS</h4>
-                  <p class="mt-0.5 text-xs text-gray-500">Polystyrene / expanded polystyrene</p>
+                  <p class="mt-0.5 text-xs text-gray-500">Polystyrene / expanded polystyrene (0.1l per kg)</p>
                 </div>
               </div>
               <div class="text-right">
@@ -264,7 +264,7 @@
     <section class="mt-8" aria-label="Conversion results">
       <div id="conversion-result"
           aria-live="polite"
-          class="h-24 flex flex-col  items-center justify-center overflow-y-auto rounded-2xl border border-gray-200 bg-sky-700 p-4 text-sm font-semibold text-white shadow-sm">
+          class="h-24 flex flex-col  items-center justify-center overflow-y-auto rounded-2xl border border-gray-200 bg-emerald-700 p-4 text-sm font-semibold text-white shadow-sm">
         <p class="text-center">Nothing converted yet...</p>
       </div>
     </section>
@@ -290,7 +290,7 @@
         const percentage = ((value - min) / (max - min)) * 100;
 
         slider.style.background =
-          `linear-gradient(to right, #008cff ${percentage}%, #e5e7eb ${percentage}%)`;
+          `linear-gradient(to right, #16845b ${percentage}%, #e5e7eb ${percentage}%)`;
       });
 
       document.getElementById("total-value").value =
